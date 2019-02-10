@@ -34,22 +34,41 @@ body {
     content: '\0041';
 }
 
+.btn-big {
+    width: 194px;
+    height: 45px;
+    background-color: #b88b58;
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    border-style: none;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
 .wrapper {
     position: relative;
     height: 850px;
-    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-image: url('../images/Bg_img_01.png');
     background-position: center;
     background-size: cover;
 
     .navigation {
-        max-width: 1600px;
         display: flex;
         align-items: center;
+        position: fixed;
         justify-content: space-around;
         background-color: black;
+        width: 100%;
         height: 100px;
-        max-width: 1600px;
+
+
 
         .logo {
             width: 50px;
@@ -79,9 +98,9 @@ body {
                     text-transform: uppercase;
                     color: #fff;
                     display: flex;
-                    width: 100%;
+
                     height: inherit;
-                    justify-content: center;
+                    justify-content: space-around;
                     align-items: center;
                     text-decoration: none;
                 }
@@ -92,11 +111,14 @@ body {
 
     .motto {
         max-width: 700px;
-        position: absolute;
-        top: 300px;
-        left: 30%;
+        display: flex;
+        margin-top: 200px;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
 
         h1 {
+            justify-content: center;
             font-size: 72px;
             font-weight: 700;
             line-height: 69px;
@@ -118,25 +140,12 @@ body {
         }
 
         .btn-big {
-            width: 194px;
-            height: 45px;
-            background-color: #b88b58;
-            color: #fff;
-            border-radius: 25px;
-            text-align: center;
-            border-style: none;
-            color: #ffffff;
-            font-size: 12px;
-            font-weight: 700;
-            line-height: 18px;
-            text-transform: uppercase;
-            margin: 49px 0 0 35%;
+            margin: 49px 25%;
         }
     }
 
     .dots {
         position: absolute;
-        left: 54%;
         bottom: 42px;
         width: 70px;
         height: 20px;
@@ -175,5 +184,91 @@ body {
             color: #ffffff;
             font-size: 40px;
         }
+    }
+}
+
+.about {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+
+        h1 {
+            margin-top: 63px;
+            color: #000000;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 30px;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #aeaeae;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            text-transform: uppercase;
+        }
+    }
+
+    .description {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 532px;
+        margin-top: 55px;
+
+        .content {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            margin-right: 32px;
+
+            p {
+                color: #242424;
+                font-family: Montserrat;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 25px;
+                margin-bottom: 34px;
+            }
+        }
+
+        .video {
+            width: 445px;
+            height: 275px;
+
+            .image {
+                width: 100%;
+                height: 100%;
+                background-image: url('../images/strus.jpg.jpg');
+                background-position: center;
+                background-size: cover;
+
+                .play {
+                    text-align: center;
+
+                    h1 {
+                        color: #ffffff;
+                        font-family: "Montserrat - Semi Bold";
+                        font-size: 30px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        text-transform: uppercase;
+                        opacity: 0;
+                        padding: 25% 0;
+                    }
+                }
+            }
+        }
+
     }
 }

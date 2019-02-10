@@ -26,24 +26,43 @@ body {
 .icon-Telephone:before {
   content: '\0041'; }
 
+.btn-big {
+  width: 194px;
+  height: 45px;
+  background-color: #b88b58;
+  color: #fff;
+  border-radius: 25px;
+  text-align: center;
+  border-style: none;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase; }
+
 .wrapper {
   position: relative;
   height: 850px;
-  max-width: 1600px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   background-image: url("../images/Bg_img_01.png");
   background-position: center;
   background-size: cover; }
   .wrapper .navigation {
-    max-width: 1600px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
         align-items: center;
+    position: fixed;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     background-color: black;
-    height: 100px;
-    max-width: 1600px; }
+    width: 100%;
+    height: 100px; }
     .wrapper .navigation .logo {
       width: 50px;
       height: 51px; }
@@ -68,19 +87,26 @@ body {
           color: #fff;
           display: -ms-flexbox;
           display: flex;
-          width: 100%;
           height: inherit;
-          -ms-flex-pack: center;
-              justify-content: center;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
           -ms-flex-align: center;
               align-items: center;
           text-decoration: none; }
   .wrapper .motto {
     max-width: 700px;
-    position: absolute;
-    top: 300px;
-    left: 30%; }
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 200px;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-align: center;
+        align-items: center; }
     .wrapper .motto h1 {
+      -ms-flex-pack: center;
+          justify-content: center;
       font-size: 72px;
       font-weight: 700;
       line-height: 69px;
@@ -96,22 +122,9 @@ body {
       text-transform: uppercase;
       text-align: center; }
     .wrapper .motto .btn-big {
-      width: 194px;
-      height: 45px;
-      background-color: #b88b58;
-      color: #fff;
-      border-radius: 25px;
-      text-align: center;
-      border-style: none;
-      color: #ffffff;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 18px;
-      text-transform: uppercase;
-      margin: 49px 0 0 35%; }
+      margin: 49px 25%; }
   .wrapper .dots {
     position: absolute;
-    left: 54%;
     bottom: 42px;
     width: 70px;
     height: 20px; }
@@ -142,3 +155,76 @@ body {
       top: 13px;
       color: #ffffff;
       font-size: 40px; }
+
+.about {
+  width: 100%;
+  background-color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .about .title {
+    width: 200px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin: 0 auto;
+    text-align: center; }
+    .about .title h1 {
+      margin-top: 63px;
+      color: #000000;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 30px;
+      text-transform: uppercase; }
+    .about .title p {
+      color: #aeaeae;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 30px;
+      text-transform: uppercase; }
+  .about .description {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    height: 532px;
+    margin-top: 55px; }
+    .about .description .content {
+      width: 40%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      margin-right: 32px; }
+      .about .description .content p {
+        color: #242424;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 25px;
+        margin-bottom: 34px; }
+    .about .description .video {
+      width: 445px;
+      height: 275px; }
+      .about .description .video .image {
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/strus.jpg.jpg");
+        background-position: center;
+        background-size: cover; }
+        .about .description .video .image .play {
+          text-align: center; }
+          .about .description .video .image .play h1 {
+            color: #ffffff;
+            font-family: "Montserrat - Semi Bold";
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 30px;
+            text-transform: uppercase;
+            opacity: 0;
+            padding: 25% 0; }
